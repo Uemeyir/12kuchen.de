@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.greeting-container {
+    background: linear-gradient(180deg, #de6fa1, #f88379);;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.greeting-text {
+    color: pink;
+    font-size: 40px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.00, minimum-scale=1.00">
+<link rel="stylesheet" href="/CSS/cakethings.css">
+<title>Website</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar-container">
+        <div class="navbar" id="nbar">
+            <a href="/HTML/main.html">Hauptseite</a>
+            <div class="dropdown">
+                <button class="dropbtn" id="figurebar" onclick="window.location.href='figuren.html'">Figuren</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="scrollToSection('MickyMaus')">Micky Maus</a>
+                    <a href="#" onclick="scrollToSection('Spongebob')">Spongebob</a>
+                    <a href="#" onclick="scrollToSection('BobDerBaumeister')">Bob der Baumeister</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="cakebar" onclick="window.location.href='tortensachen.html'">Tortensachen</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="scrollToSection('tortenaufleger')">Tortenaufleger</a>
+                    <a href="#"onclick="scrollToSection('fondant')">Fondant</a>
+                    <a href="#"onclick="scrollToSection('farben')">Farben</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+    <div class="content-container">
+        <div class="second-bg">
+            <div class="product-div">product1</div>
+            <h3 style="text-align: center; font-weight: bold; font-size: 24px; margin-top: 5%;clear: both;" id="tortenaufleger">Tortenaufleger</h3>
+            <div class="product-div">product2</div>
+            <div class="product-div">product3</div>
+            <div class="product-div">product4</div>
+            <div class="product-div">product5</div>
+            <h3 style="text-align: center; font-weight: bold; font-size: 24px; margin-top: 10px;" id="fondant">Fondant</h3>
+            <div class="product-div">product6</div>
+            <div class="product-div">product7</div>
+            <div class="product-div">product8</div>
+            <div class="product-div">product9</div>
+            <h3 style="text-align: center; font-weight: bold; font-size: 24px; margin-top: 10px;" id="farben">Farben</h3>
+            <div class="product-div">product10</div>
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("nbar").style.fontSize = "1.5vw";
+                document.getElementById("figurebar").style.fontSize = "1.5vw";
+                document.getElementById("cakebar").style.fontSize = "1.5vw";
+            } else {
+                document.getElementById("nbar").style.fontSize = "2vw";
+                document.getElementById("figurebar").style.fontSize = "2vw";
+                document.getElementById("cakebar").style.fontSize = "2vw";
+            }
+        }
+
+        function scrollToSection(elementId) {
+            var element = document.getElementById(elementId);
+            if (element) {
+                var yOffset = -100; // Adjust the y-axis position as needed
+                var y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+
+            // prevents it from jumping to the top when clicked
+            event.preventDefault();
+        }
+
+    </script>
+</body>
+
+</html>

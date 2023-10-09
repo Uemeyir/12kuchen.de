@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/CSS/main.css">
+<title>Website</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar-container">
+        <div class="navbar" id="nbar">
+            <a href="/HTML/main.html">Hauptseite</a>
+            <div class="dropdown">
+                <button class="dropbtn" id="figurebar" onclick="window.location.href='figuren.html'">Figuren</button>
+                <div class="dropdown-content">
+                    <a href="#">Micky Maus</a>
+                    <a href="#">Spongebob</a>
+                    <a href="#">Bob der Baumeister</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="cakebar" onclick="window.location.href='tortensachen.html'">Tortensachen</button>
+                <div class="dropdown-content">
+                    <a href="#">Tortenaufleger</a>
+                    <a href="#">Fondant</a>
+                    <a href="#">Farben</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+    <div class="content-container">
+        <div class="second-bg">
+            <p>Haloo</p>
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("nbar").style.fontSize = "1.5vw";
+                document.getElementById("figurebar").style.fontSize = "1.5vw";
+                document.getElementById("cakebar").style.fontSize = "1.5vw";
+            } else {
+                document.getElementById("nbar").style.fontSize = "2vw";
+                document.getElementById("figurebar").style.fontSize = "2vw";
+                document.getElementById("cakebar").style.fontSize = "2vw";
+            }
+        }
+    </script>
+</body>
+
+</html>
