@@ -129,19 +129,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .icon {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: fixed;
+    left: 1vh;
+    top: 1vh;
     cursor: pointer;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: black;
     border-radius: 5px;
-    z-index: 29;
+    z-index: 20;
 }
 
 .mini-page {

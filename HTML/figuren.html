@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.00, minimum-scale=1.00">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     <link rel="stylesheet" href="/CSS/figuren.css">
+    <script src="../main.js" defer></script>
     <title>Website</title>
 </head>
 
@@ -65,55 +66,20 @@
             <div class="product-div">product12</div>
         </div>
     </div>
-    <i class="gg-shopping-cart" style="left: 14px; z-index: 29;"></i>
-
+    <!--mini page for buy menu-->
     <div class="container">
-        <div class="icon" onclick="toggleMiniPage()">Click Me</div>
+
+        <a href="#" onclick="toggleMiniPage()">
+            <i class="gg-shopping-cart icon"
+                style="position: fixed; z-index: 30; left: 1vh; top: 1vh; text-decoration: none;"></i>
+        </a>
         <div class="mini-page" id="miniPage">
-            <!-- Content for the mini-page goes here -->
+            <!-- Content for mini-page -->
             <h2>Mini Page Content</h2>
             <p>This is some content for the mini-page.</p>
             <button onclick="closeMiniPage()">Close</button>
         </div>
     </div>
-
-    <script>
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-                document.getElementById("nbar").style.fontSize = "1.5vw";
-                document.getElementById("figurebar").style.fontSize = "1.5vw";
-                document.getElementById("cakebar").style.fontSize = "1.5vw";
-            } else {
-                document.getElementById("nbar").style.fontSize = "2vw";
-                document.getElementById("figurebar").style.fontSize = "2vw";
-                document.getElementById("cakebar").style.fontSize = "2vw";
-            }
-        }
-
-        function scrollToSection(elementId) {
-            var element = document.getElementById(elementId);
-            if (element) {
-                var yOffset = -100; // Adjust the y-axis position as needed
-                var y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-
-            // prevents it from jumping to the top when clicked
-            event.preventDefault();
-        }
-
-        function toggleMiniPage() {
-            var miniPage = document.getElementById("miniPage");
-            miniPage.classList.toggle("open");
-        }
-
-        function closeMiniPage() {
-            var miniPage = document.getElementById("miniPage");
-            miniPage.classList.remove("open");
-        }
-
-    </script>
 </body>
 
 </html>

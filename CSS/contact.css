@@ -106,3 +106,62 @@ body {
     background: linear-gradient(45deg, #de6fa1, pink);
     overflow: auto;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.icon {
+    position: fixed;
+    left: 1vh;
+    top: 1vh;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+.mini-page {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Start off-screen to the left */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 20;
+}
+
+.mini-page.open {
+    left: 0; /* Slide in from the left */
+}
+
+.headerh3 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Custom scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: orange;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: darkgray;
+}
